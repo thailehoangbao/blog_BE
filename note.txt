@@ -1,0 +1,31 @@
+docker pull mysql
+docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=1234 -p 3307:3306 -v -d mysql
+
+nest g mo user 
+(tạo một module user)
+nest g co user
+(tạo một controller user)
+nest g s user
+(tạo một service user)
+
+npm install --save @nestjs/typeorm typeorm mysql2
+
+npm run migration:generate db/migrations/create_user_table
+npm run migration:generate db/migrations/add_email_to_user
+
+npm run migration:run
+npm run migration:revert (undo lại tác vụ trước đó)
+--------------------------------------------------
+npm i bcrypt 
+npm i --save @nestjs/jwt
+
+npm i class-validator
+npm install class-transformer class-validator
+
+npm i --save @nestjs/config
+npm i @nestjs/swagger
+
+npm i -D @types/multer
+npm i path
+
+npm install @nestjs/serve-static
